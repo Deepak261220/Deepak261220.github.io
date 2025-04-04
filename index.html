@@ -1,100 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Delivery Platform</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery Platform</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ff6347;
+            padding: 1rem;
+        }
+
+        nav .logo img {
+            width: 120px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 18px;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            display: flex;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ff6347;
+            color: white;
+            border-radius: 5px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: url('background.jpg') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            padding: 15px 30px;
+            background-color: #ff6347;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Filters Section */
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+
+        .filter-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .filter-item label {
+            margin-right: 10px;
+        }
+
+        .filter-item select {
+            padding: 5px;
+        }
+
+        /* Menu Section */
+        .menu {
+            padding: 50px 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .menu h2 {
+            margin-bottom: 30px;
+        }
+
+        .menu-items {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .menu-item {
+            text-align: center;
+            width: 30%;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .order-btn {
+            padding: 10px 20px;
+            background-color: #ff6347;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        /* Promotional Video Section */
+        .promo-video {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+
+        .promo-video video {
+            width: 80%;
+            max-width: 800px;
+            margin-top: 20px;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer ul li {
+            margin: 0 20px;
+        }
+    </style>
 </head>
 <body>
-
-  <!-- Header Section -->
-  <header>
-    <div class="container">
-      <h1>Food Delivery</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Order Now</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Food Delivery">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Offers</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section (Background Image and Intro) -->
-  <section id="hero">
-    <div class="hero-content">
-      <h2>Delicious Meals Delivered to Your Door</h2>
-      <p>Explore a variety of dishes from your favorite restaurants.</p>
-      <a href="#menu" class="btn">Order Now</a>
-    </div>
-  </section>
-
-  <!-- Search Filters Section -->
-  <section id="filters">
-    <div class="container">
-      <h3>Find Your Favorite Dish</h3>
-      <form id="search-form">
-        <input type="text" id="search" placeholder="Search for dishes...">
-        <select id="category">
-          <option value="all">All Categories</option>
-          <option value="pizza">Pizza</option>
-          <option value="sushi">Sushi</option>
-          <option value="burger">Burger</option>
-        </select>
-        <button type="submit">Search</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Menu Section with Images -->
-  <section id="menu">
-    <div class="container">
-      <h3>Our Menu</h3>
-      <div class="menu-items">
-        <div class="menu-item">
-          <img src="pizza.jpg" alt="Pizza">
-          <h4>Pizza</h4>
-          <p>Delicious and fresh pizza from top chefs.</p>
-          <button class="btn">Order Now</button>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for food...">
+            <button class="search-btn">Search</button>
         </div>
-        <div class="menu-item">
-          <img src="sushi.jpg" alt="Sushi">
-          <h4>Sushi</h4>
-          <p>Fresh sushi with the finest ingredients.</p>
-          <button class="btn">Order Now</button>
+    </nav>
+
+    <!-- Header Section with Background Image -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Delicious Food Delivered To You</h1>
+            <p>Order from your favorite restaurants and enjoy a tasty meal delivered to your doorsteps!</p>
+            <button class="cta-btn">Order Now</button>
         </div>
-        <div class="menu-item">
-          <img src="burger.jpg" alt="Burger">
-          <h4>Burger</h4>
-          <p>Juicy and tender burgers with crispy fries.</p>
-          <button class="btn">Order Now</button>
+    </header>
+
+    <!-- Filters Section -->
+    <section class="filters">
+        <div class="filter-item">
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="all">All</option>
+                <option value="pizza">Pizza</option>
+                <option value="sushi">Sushi</option>
+                <option value="burgers">Burgers</option>
+            </select>
         </div>
-      </div>
-    </div>
-  </section>
+        <div class="filter-item">
+            <label for="sort">Sort By:</label>
+            <select id="sort">
+                <option value="price">Price</option>
+                <option value="rating">Rating</option>
+            </select>
+        </div>
+    </section>
 
-  <!-- Video Section -->
-  <section id="video">
-    <div class="container">
-      <h3>Watch How It Works</h3>
-      <video width="100%" controls>
-        <source src="promo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </section>
+    <!-- Food Delivery Menu -->
+    <section class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="pizza.jpg" alt="Pizza">
+                <h3>Margherita Pizza</h3>
+                <p>$10.99</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <div class="menu-item">
+                <img src="sushi.jpg" alt="Sushi">
+                <h3>Sushi Set</h3>
+                <p>$15.99</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+            <div class="menu-item">
+                <img src="burger.jpg" alt="Burger">
+                <h3>Cheeseburger</h3>
+                <p>$8.99</p>
+                <button class="order-btn">Order Now</button>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer Section -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Food Delivery. All Rights Reserved.</p>
-    </div>
-  </footer>
+    <!-- Promotional Video Section -->
+    <section class="promo-video">
+        <h2>Why Choose Us?</h2>
+        <video controls>
+            <source src="promo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Food Delivery Platform. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // JavaScript for filtering and sorting functionality
+        document.querySelector('.search-btn').addEventListener('click', function() {
+            const searchQuery = document.querySelector('.search-bar input').value;
+            alert('Searching for: ' + searchQuery);
+        });
+
+        document.getElementById('category').addEventListener('change', function() {
+            const selectedCategory = this.value;
+            alert('Selected Category: ' + selectedCategory);
+        });
+
+        document.getElementById('sort').addEventListener('change', function() {
+            const selectedSort = this.value;
+            alert('Sort By: ' + selectedSort);
+        });
+    </script>
 </body>
 </html>
