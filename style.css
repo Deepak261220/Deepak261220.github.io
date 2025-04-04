@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+button {
+  background-color: #FF6347;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #FF4500;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  padding: 20px 0;
+}
+
+header h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 36px;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Hero Section */
+#hero {
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+#hero .hero-content h2 {
+  font-size: 48px;
+}
+
+#hero .hero-content p {
+  font-size: 20px;
+}
+
+#hero .btn {
+  padding: 15px 30px;
+  background-color: #FF6347;
+  border: none;
+  font-size: 18px;
+}
+
+/* Search Filters Section */
+#filters {
+  background-color: #f9f9f9;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#filters form {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+#filters input, #filters select {
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+}
+
+/* Menu Section */
+#menu {
+  padding: 40px 0;
+}
+
+#menu .menu-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+#menu .menu-item {
+  text-align: center;
+}
+
+#menu .menu-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Video Section */
+#video {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+}
+
+#video video {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}

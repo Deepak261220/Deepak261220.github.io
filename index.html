@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Delivery Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>Food Delivery</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Order Now</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section (Background Image and Intro) -->
+  <section id="hero">
+    <div class="hero-content">
+      <h2>Delicious Meals Delivered to Your Door</h2>
+      <p>Explore a variety of dishes from your favorite restaurants.</p>
+      <a href="#menu" class="btn">Order Now</a>
+    </div>
+  </section>
+
+  <!-- Search Filters Section -->
+  <section id="filters">
+    <div class="container">
+      <h3>Find Your Favorite Dish</h3>
+      <form id="search-form">
+        <input type="text" id="search" placeholder="Search for dishes...">
+        <select id="category">
+          <option value="all">All Categories</option>
+          <option value="pizza">Pizza</option>
+          <option value="sushi">Sushi</option>
+          <option value="burger">Burger</option>
+        </select>
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Menu Section with Images -->
+  <section id="menu">
+    <div class="container">
+      <h3>Our Menu</h3>
+      <div class="menu-items">
+        <div class="menu-item">
+          <img src="pizza.jpg" alt="Pizza">
+          <h4>Pizza</h4>
+          <p>Delicious and fresh pizza from top chefs.</p>
+          <button class="btn">Order Now</button>
+        </div>
+        <div class="menu-item">
+          <img src="sushi.jpg" alt="Sushi">
+          <h4>Sushi</h4>
+          <p>Fresh sushi with the finest ingredients.</p>
+          <button class="btn">Order Now</button>
+        </div>
+        <div class="menu-item">
+          <img src="burger.jpg" alt="Burger">
+          <h4>Burger</h4>
+          <p>Juicy and tender burgers with crispy fries.</p>
+          <button class="btn">Order Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section id="video">
+    <div class="container">
+      <h3>Watch How It Works</h3>
+      <video width="100%" controls>
+        <source src="promo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Food Delivery. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
